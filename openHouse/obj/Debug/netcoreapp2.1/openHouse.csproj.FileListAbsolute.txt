@@ -1,0 +1,11 @@
+/Users/Olivia/Projects/openHouse/openHouse/bin/Debug/netcoreapp2.1/openHouse.deps.json
+/Users/Olivia/Projects/openHouse/openHouse/bin/Debug/netcoreapp2.1/openHouse.runtimeconfig.json
+/Users/Olivia/Projects/openHouse/openHouse/bin/Debug/netcoreapp2.1/openHouse.runtimeconfig.dev.json
+/Users/Olivia/Projects/openHouse/openHouse/bin/Debug/netcoreapp2.1/openHouse.dll
+/Users/Olivia/Projects/openHouse/openHouse/bin/Debug/netcoreapp2.1/openHouse.pdb
+/Users/Olivia/Projects/openHouse/openHouse/obj/Debug/netcoreapp2.1/openHouse.csprojAssemblyReference.cache
+/Users/Olivia/Projects/openHouse/openHouse/obj/Debug/netcoreapp2.1/openHouse.csproj.CoreCompileInputs.cache
+/Users/Olivia/Projects/openHouse/openHouse/obj/Debug/netcoreapp2.1/openHouse.AssemblyInfoInputs.cache
+/Users/Olivia/Projects/openHouse/openHouse/obj/Debug/netcoreapp2.1/openHouse.AssemblyInfo.cs
+/Users/Olivia/Projects/openHouse/openHouse/obj/Debug/netcoreapp2.1/openHouse.dll
+/Users/Olivia/Projects/openHouse/openHouse/obj/Debug/netcoreapp2.1/openHouse.pdb

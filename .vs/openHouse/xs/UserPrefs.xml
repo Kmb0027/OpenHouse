@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{6733A9A5-10BE-4349-A69C-850E48D9E732}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="openHouse/openHouse.cs">
+    <Files>
+      <File FileName="openHouse/Program.cs" Line="97" Column="1" />
+      <File FileName="openHouse/openHouse.cs" Line="52" Column="25" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="openHouse" expanded="True">
+            <Node name="openHouse" expanded="True">
+              <Node name="openHouse.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/Olivia/Projects/openHouse/openHouse/openHouse.cs" relfile="openHouse/openHouse.cs" line="20" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.openHouse PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>

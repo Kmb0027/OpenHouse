@@ -20,34 +20,14 @@ namespace openHouse
             if(livingRoomResponse.ToUpper() == "Y" || livingRoomResponse.ToUpper() == "YES" || livingRoomResponse.ToUpper() == "YEAH" || livingRoomResponse.ToUpper() == "YEP")
             {
                 Console.WriteLine("This twelve by eight foot living area has wooden floors, a ceiling fan, a fireplace, and a television.");
-
+                
                 Console.WriteLine("Would you like to know about any of these particular features?");
                 string livingRoomFeatureResponse = Console.ReadLine();
                 {
                     if (livingRoomFeatureResponse.ToUpper() == "Y" || livingRoomFeatureResponse.ToUpper() == "YES" || livingRoomFeatureResponse.ToUpper() == "YEAH" || livingRoomFeatureResponse.ToUpper() == "YEP")
                     {
                         Console.WriteLine("Which feature would you like to know more about?");
-                        string livingRoomFeatureSelection = Console.ReadLine();
-                        if (livingRoomFeatureResponse.ToUpper() == "CEILING FAN")
-                        {
-                            Console.WriteLine("This is a 4 bladed fan with three speed settings. It has four light fixtures with 40watt incandescent bulbs.");
-
-                        }
-                        else if (livingRoomFeatureSelection.ToUpper() == "FIREPLACE")
-                        {
-                            Console.WriteLine("The fireplace has the original brick from the Sixties, and the oak mantle was added later.");
-
-                        }
-                        else if (livingRoomFeatureSelection.ToUpper() == "TELEVISION")
-                        {
-                            Console.WriteLine("Unfortunately, the current owners will be taking the t.v. with them, but there is cable access for this room only.");
-
-                        }
-                        else if (livingRoomFeatureSelection.ToUpper() == "WOODEN FLOORS" || livingRoomFeatureSelection.ToUpper() == "FLOORS" || livingRoomFeatureSelection.ToUpper() == "FLOOR")
-                        {
-                            Console.WriteLine("These hard wood floors are original pine wood from the Sixties when the house was constructed.");
-
-                        }
+                        LivingroomFeatureInformation(Console.ReadLine());
                     }
                     else
                     {
@@ -57,7 +37,7 @@ namespace openHouse
             }
 
 
-            Console.WriteLine("Okay then. Would you be interested in seeing the kitchen?");
+            /*Console.WriteLine("Okay then. Would you be interested in seeing the kitchen?");
 
             string kitchenResponse = Console.ReadLine();
 
@@ -92,11 +72,36 @@ namespace openHouse
             }
 
 
-            Console.WriteLine("The bedrooms are upstairs. Shall we?");
+            Console.WriteLine("The bedrooms are upstairs. Shall we?");*/
 
 
 
 
+        }
+
+        static void LivingroomFeatureInformation (string livingroomFeatureChoice)
+
+        {
+            if (livingroomFeatureChoice.ToUpper() == "CEILING FAN")
+            {
+                Console.WriteLine("This is a 4 bladed fan with three speed settings. It has four light fixtures with 40watt incandescent bulbs.");
+
+            }
+            else if (livingroomFeatureChoice.ToUpper() == "FIREPLACE")
+            {
+                Console.WriteLine("The fireplace has the original brick from the Sixties, and the oak mantle was added later.");
+
+            }
+            else if (livingroomFeatureChoice.ToUpper() == "TELEVISION")
+            {
+                Console.WriteLine("Unfortunately, the current owners will be taking the t.v. with them, but there is cable access for this room only.");
+
+            }
+            else if (livingroomFeatureChoice.ToUpper() == "WOODEN FLOORS" || livingroomFeatureChoice.ToUpper() == "FLOORS" || livingroomFeatureChoice.ToUpper() == "FLOOR")
+            {
+                Console.WriteLine("These hard wood floors are original pine wood from the Sixties when the house was constructed.");
+
+            }
         }
     }
 }

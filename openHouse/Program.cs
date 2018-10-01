@@ -3,94 +3,132 @@
 namespace openHouse
 {
     class Program
-    {
+    {  
         static void Main(string[] args)
         {
-            //heavy on if statements
-            /* 1)User that's visiting an open house. 2) Promp user to visit rooms. 3)Optionally visit rooms. a)Ask about things in the room b)Optionally describe things
-             * 4)The above, but continued w/open house aspects */
+            Realtor realtor = new Realtor("Mitch");
+            House house = new House("123 Main");
 
-            Console.WriteLine("Hello! Welcome to our open house.");
+            Room kitchen = new Room("Kitchen");
 
-            Console.WriteLine("Would you like to take a tour of the living room?");
+            Items sink = new Items("Kitchen Sink");
+            sink.Description = $"This {sink.Name} is a farm-style sink with industrial spray nozzel.";
+            kitchen.ItemsInside.Add(sink);
+            Items stove = new Items("Kitchen Stove");
+            stove.Description = $"The {stove.Name} is a gas appliance that is fifteen years old.";
+            kitchen.ItemsInside.Add(stove);
+            Items cabinets = new Items("Kitchen Cabinets");
+            cabinets.Description = $"These {cabinets.Name} are hand-made oak cabinets.";
+            kitchen.ItemsInside.Add(cabinets);
 
-            string livingRoomResponse = Console.ReadLine();
+            Room bedRoom = new Room("Bedroom");
 
+            Items floor = new Items("Wooden Floors");
+            floor.Description = "These floors are original maple hardwood.";
+            bedRoom.ItemsInside.Add(floor);
+            Items ceilingFan = new Items("Ceiling Fan");
+            ceilingFan.Description = "This fan has 4 blades and a beautiful light fixture";
+            bedRoom.ItemsInside.Add(ceilingFan);
+            Items closet = new Items("Bedroom Closet");
+            closet.Description = "This is a walk-in closet with a shoe rack";
+            bedRoom.ItemsInside.Add(closet);
 
-            if(livingRoomResponse.ToUpper() == "Y" || livingRoomResponse.ToUpper() == "YES" || livingRoomResponse.ToUpper() == "YEAH" || livingRoomResponse.ToUpper() == "YEP")
+            Room livingRoom = new Room("Living Room");
+
+            Items fireplace = new Items("Fireplace");
+            fireplace.Description = "This is a real brick, wood burning fireplace";
+            livingRoom.ItemsInside.Add(fireplace);
+            Items outlets = new Items("Wall Outlets");
+            outlets.Description = "There are 4 grounded electrical outlets and one cable t.v. outlet";
+            livingRoom.ItemsInside.Add(outlets);
+            Items window = new Items("Window");
+            window.Description = "The large bay window overlooks the front yard and lets in a lot of light";
+            livingRoom.ItemsInside.Add(window);
+            house.Rooms.Add(bedRoom);
+            house.Rooms.Add(kitchen);
+
+            realtor.Speak($"Hello! My name is {realtor.Name}");
+            realtor.Speak($"The house at {house.Address} has a {kitchen.Name} and a {bedRoom.Name}");
+            realtor.Speak("Would you like to tour this house?");
+            if (realtor.UserAnsweredYes(Console.ReadLine()))
             {
-                Console.WriteLine("This twelve by eight foot living area has wooden floors, a ceiling fan, a fireplace, and a television.");
+                realtor.Speak($"The house has a {kitchen.Name}, a {livingRoom.Name} and a {bedRoom.Name}. Which would you like to see?");
+            }
+            else { realtor.Speak("Bye!"); }
 
-                Console.WriteLine("Would you like to know about any of these particular features?");
-                string livingRoomFeatureResponse = Console.ReadLine();
-                if(livingRoomFeatureResponse.ToUpper() == "Y" || livingRoomFeatureResponse.ToUpper() == "YES" || livingRoomFeatureResponse.ToUpper() == "YEAH" || livingRoomFeatureResponse.ToUpper() == "YEP")
+            bool endDialogue = true;
+            while (endDialogue == true)
+            {
+                realtor.Speak($"Do you want to see the {kitchen.Name}, {livingRoom.Name} or the {bedRoom.Name}?");
+                string userRoomSelection = Console.ReadLine();
+                if (userRoomSelection.ToUpper() == kitchen.Name.ToUpper())
                 {
-                    Console.WriteLine("Which feature would you like to know more about?");
-                    string livingRoomFeatureSelection = Console.ReadLine();
-                    if(livingRoomFeatureResponse.ToUpper() == "CEILING FAN")
-                    {
-                        Console.WriteLine("This is a 4 bladed fan with three speed settings. It has four light fixtures with 40watt incandescent bulbs.");
+                    realtor.Speak($"The {kitchen.Name} has several interesting items like {sink.Name}, {stove.Name}, and {cabinets.Name}");
 
-                    }else if(livingRoomFeatureSelection.ToUpper() == "FIREPLACE")
+                    for (int i = 0; i <= 5; i++)
                     {
-                        Console.WriteLine("The fireplace has the original brick from the Sixties, and the oak mantle was added later.");
+                        string userItemSelection = Console.ReadLine();
 
-                    }else if(livingRoomFeatureSelection.ToUpper() == "TELEVISION")
-                    {
-                        Console.WriteLine("Unfortunately, the current owners will be taking the t.v. with them, but there is cable access for this room only.");
+                        realtor.GiveUserItemChoice(userItemSelection, stove.Name, stove.Description, sink.Name, sink.Description, cabinets.Name, cabinets.Description);
+                        if (i == 5)
+                        {
+                            realtor.Speak("Let's move on.");
+                        }
+                        else if (userItemSelection == "none")
+                        {
+                            break;
+                        }
+                    }
 
-                    }else if(livingRoomFeatureSelection.ToUpper() == "WOODEN FLOORS" || livingRoomFeatureSelection.ToUpper() == "FLOORS" || livingRoomFeatureSelection.ToUpper() == "FLOOR")
+                }
+                else if (userRoomSelection.ToUpper() == bedRoom.Name.ToUpper())
+                {
+                    realtor.Speak($"The {bedRoom.Name} has several interesting items like {floor.Name}, {ceilingFan.Name}, and {closet.Name}");
+
+                    for (int i = 0; i <= 5; i++)
                     {
-                        Console.WriteLine("These hard wood floors are original pine wood from the Sixties when the house was constructed.");
+                        string userItemSelection = Console.ReadLine();
+
+                        realtor.GiveUserItemChoice(userItemSelection, floor.Name, floor.Description, ceilingFan.Name, ceilingFan.Description, closet.Name, closet.Description);
+                        if (i == 5)
+                        {
+                            realtor.Speak("Let's move on.");
+                        }
+                        else if (userItemSelection == "none")
+                        {
+                            break;
+                        }
+                    }
+                }
+                else if (userRoomSelection.ToUpper() == livingRoom.Name.ToUpper())
+                {
+                    realtor.Speak($"The {livingRoom.Name} has several interesting items like {floor.Name}, {ceilingFan.Name}, and {closet.Name}");
+
+                    for (int i = 0; i <= 5; i++)
+                    {
+                        string userItemSelection = Console.ReadLine();
+
+                        realtor.GiveUserItemChoice(userItemSelection, window.Name, window.Description, outlets.Name, outlets.Description, fireplace.Name, fireplace.Description);
+                        if (i == 5)
+                        {
+                            realtor.Speak("Let's move on.");
+                        }
+                        else if (userItemSelection == "none")
+                        {
+                            break;
+                        }
 
                     }
-                }else
+                }
+                else
                 {
-                    Console.WriteLine("I'm not sure what you mean. Let's continue.");
+                    endDialogue = false;
+                    realtor.Speak("Thank you for coming in today!");
                 }
             }
-
-
-            Console.WriteLine("Okay then. Would you be interested in seeing the kitchen?");
-
-            string kitchenResponse = Console.ReadLine();
-
-            if(kitchenResponse.ToUpper() == "Y" || kitchenResponse.ToUpper() == "YES" || kitchenResponse.ToUpper() == "YEAH" || kitchenResponse.ToUpper() == "YEP")
-            {
-                Console.WriteLine("The kitchen is equipped with a stove, a dish washer, and a sink.");
-                Console.WriteLine("Would you like to know more about the kitchen?");
-                string kitchenFeatureResponse = Console.ReadLine();
-                if (kitchenFeatureResponse.ToUpper() == "Y" || kitchenFeatureResponse.ToUpper() == "YES" || kitchenFeatureResponse.ToUpper() == "YEAH" || kitchenFeatureResponse.ToUpper() == "YEP")
-                {
-                    Console.WriteLine("Which item are you interested in?");
-                    string kitchenFeatureSelection = Console.ReadLine();
-                    if(kitchenFeatureSelection.ToUpper() == "STOVE")
-                    {
-                        Console.WriteLine("This gas stove is 10 years old, and comes with four eyes and a broiler feature.");
-
-                    }else if (kitchenFeatureSelection.ToUpper() == "DISH WASHER" )
-                    {
-                        Console.WriteLine("The dish washer is a GE product, and is currently still under warrenty.");
-                    }else if (kitchenFeatureSelection.ToUpper() == "SINK")
-                    {
-                        Console.WriteLine("The sink is a large, farmhouse style sink with a restaurant grade spray nozzle. ");
-                    }else
-                    {
-                        Console.WriteLine("I'll have to check with the owner. Anyway...");
-                    }
-
-                }
-            }else
-            {
-                Console.WriteLine("Okay. We can move on then.");
-            }
-
-
-            Console.WriteLine("The bedrooms are upstairs. Shall we?");
-
-
-
-
         }
     }
 }
+
+
+

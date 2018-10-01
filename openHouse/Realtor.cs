@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 namespace openHouse
 {
     public class Realtor
@@ -57,4 +58,4 @@ namespace openHouse
     }
 }
 
-}
+

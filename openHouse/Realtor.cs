@@ -12,6 +12,7 @@ namespace openHouse
         public string Name { get; set; }
         public void Speak(string message)
         {
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.WriteLine(message);
         }
         public bool UserAnsweredYes(string answer)
@@ -54,6 +55,9 @@ namespace openHouse
             return "Okay we can see something else.";
 
         }
+
+        public List<string> Houses { get; set; }= new List<string>();
+      
 
     }
 }

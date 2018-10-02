@@ -7,7 +7,7 @@ namespace openHouse
         static void Main(string[] args)
         {
             Realtor realtor = new Realtor("Mitch");
-            House house = new House("123 Main");
+            House house1 = new House("123 Main");
 
             Room kitchen = new Room("Kitchen");
 
@@ -44,15 +44,15 @@ namespace openHouse
             Items window = new Items("Window");
             window.Description = "The large bay window overlooks the front yard and lets in a lot of light";
             livingRoom.ItemsInside.Add(window);
-            house.Rooms.Add(bedRoom);
-            house.Rooms.Add(kitchen);
+            house1.Rooms.Add(bedRoom);
+            house1.Rooms.Add(kitchen);
+            house1.Rooms.Add(livingRoom);
 
             realtor.Speak($"Hello! My name is {realtor.Name}");
-            realtor.Speak($"The house at {house.Address} has a {kitchen.Name} and a {bedRoom.Name}");
-            realtor.Speak("Would you like to tour this house?");
+            realtor.Speak($"Would you like to tour the house at {house1.Address}?");
             if (realtor.UserAnsweredYes(Console.ReadLine()))
             {
-                realtor.Speak($"The house has a {kitchen.Name}, a {livingRoom.Name} and a {bedRoom.Name}. Which would you like to see?");
+                realtor.Speak($"The house has a {kitchen.Name}, a {livingRoom.Name}, and a {bedRoom.Name}.");
             }
             else { realtor.Speak("Bye!"); }
 
@@ -102,7 +102,7 @@ namespace openHouse
                 }
                 else if (userRoomSelection.ToUpper() == livingRoom.Name.ToUpper())
                 {
-                    realtor.Speak($"The {livingRoom.Name} has several interesting items like {floor.Name}, {ceilingFan.Name}, and {closet.Name}");
+                    realtor.Speak($"The {livingRoom.Name} has several interesting items like {window.Name}, {outlets.Name}, and {fireplace.Name}");
 
                     for (int i = 0; i <= 5; i++)
                     {

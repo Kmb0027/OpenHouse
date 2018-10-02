@@ -48,16 +48,15 @@ namespace openHouse
             }
             else if (userItemSelection == "none")
             {
+                Console.Clear();
                 Speak("Okay we can see something else");
             }
-
 
             return "Okay we can see something else.";
 
         }
 
         public List<string> Houses { get; set; }= new List<string>();
-      
 
     }
 }

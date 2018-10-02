@@ -10,6 +10,6 @@ namespace openHouse
         }
 
         public string Name { get; set; }
-        public List<Items> ItemsInside { get; set; } = new List<Items>();
+        public List<Items> ItemsInsideRoom { get; set; } = new List<Items>();
     }
 }

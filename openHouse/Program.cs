@@ -58,7 +58,12 @@ namespace openHouse
             {
                 realtor.Speak($"The house has a {kitchen.Name}, a {livingRoom.Name}, and a {bedRoom.Name}.");
             }
-            else { realtor.Speak("Bye!"); Console.ReadLine(); Environment.Exit(1); }
+            else
+            {
+                realtor.Speak("Bye!");
+                Console.ReadLine();
+                Environment.Exit(1);
+            }
             //Did not exit program. Went ahead with the Open House anyway.
 
             bool endDialogue = true;

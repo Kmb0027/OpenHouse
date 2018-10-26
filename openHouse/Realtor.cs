@@ -63,7 +63,7 @@ namespace openHouse
                 }
             }
         }
-        public void ShowHouse(House house)
+        public bool ShowHouse(House house)
         {
             Speak($"Do you want to see the {house.Rooms[0].Name}, {house.Rooms[1].Name} or the {house.Rooms[2].Name}?");
             string userRoomSelection = Console.ReadLine();
@@ -72,6 +72,7 @@ namespace openHouse
                 Console.Clear();
                 Speak($"The {house.Rooms[0].Name} has several interesting items like {house.Rooms[0].ItemsInsideRoom[0].Name}, {house.Rooms[0].ItemsInsideRoom[1].Name}, and {house.Rooms[0].ItemsInsideRoom[2].Name}");
                 LetUserExamineItem(house.Rooms[0]);
+                return true;
 
             }
             else if (userRoomSelection.ToUpper() == house.Rooms[1].Name.ToUpper())
@@ -79,16 +80,19 @@ namespace openHouse
                 Console.Clear();
                 Speak($"The {house.Rooms[1].Name} has several interesting items like {house.Rooms[1].ItemsInsideRoom[0].Name}, {house.Rooms[1].ItemsInsideRoom[1].Name}, and {house.Rooms[1].ItemsInsideRoom[2].Name}");
                 LetUserExamineItem(house.Rooms[1]);
+                return true;
             }
             else if (userRoomSelection.ToUpper() == house.Rooms[2].Name.ToUpper())
             {
                 Console.Clear();
                 Speak($"The {house.Rooms[2].Name} has several interesting items like {house.Rooms[2].ItemsInsideRoom[0].Name}, {house.Rooms[2].ItemsInsideRoom[1].Name}, and {house.Rooms[2].ItemsInsideRoom[2].Name}");
                 LetUserExamineItem(house.Rooms[2]);
+                return true;
             }
             else
             {
                 Speak("Thank you for coming in today!");
+                return false;
             }
         }
         public void IntroduceHouse(House house)

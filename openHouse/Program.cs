@@ -55,7 +55,7 @@ namespace openHouse
             bool endDialogue = true;
             while (endDialogue == true)
             {
-                realtor.ShowHouse(house1);
+                endDialogue = realtor.ShowHouse(house1);
             }
 
             Console.ReadLine();

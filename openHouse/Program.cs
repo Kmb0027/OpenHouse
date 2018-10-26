@@ -6,7 +6,6 @@ namespace openHouse
     {
         static void Main(string[] args)
         {
-
             Console.BackgroundColor = ConsoleColor.White;
             Console.Clear();
 
@@ -59,8 +58,6 @@ namespace openHouse
                 realtor.Speak($"The house has a {kitchen.Name}, a {livingRoom.Name}, and a {bedRoom.Name}.");
             }
             else { realtor.Speak("Bye!"); Console.ReadLine(); Environment.Exit(1); }
-
-
             bool endDialogue = true;
             while (endDialogue == true)
             {
@@ -70,21 +67,18 @@ namespace openHouse
                 {
                     Console.Clear();
                     realtor.Speak($"The {kitchen.Name} has several interesting items like {sink.Name}, {stove.Name}, and {cabinets.Name}");
-
                     realtor.LetUserSelectItems(kitchen);
                 }
                 else if (userRoomSelection.ToUpper() == bedRoom.Name.ToUpper())
                 {
                     Console.Clear();
                     realtor.Speak($"The {bedRoom.Name} has several interesting items like {floor.Name}, {ceilingFan.Name}, and {closet.Name}");
-
                     realtor.LetUserSelectItems(bedRoom);
                 }
                 else if (userRoomSelection.ToUpper() == livingRoom.Name.ToUpper())
                 {
                     Console.Clear();
                     realtor.Speak($"The {livingRoom.Name} has several interesting items like {window.Name}, {outlets.Name}, and {fireplace.Name}");
-
                     realtor.LetUserSelectItems(livingRoom);
                 }
                 else

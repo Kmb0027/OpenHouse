@@ -8,7 +8,6 @@ namespace openHouse
         {
             Name = name;
         }
-
         public string Name { get; set; }
         public void Speak(string message)
         {
@@ -45,14 +44,12 @@ namespace openHouse
             return "Okay we can see something else.";
 
         }
-
         public void LetUserSelectItems(Room room)
         {
             for (int i = 0; i < 4; i++)
             {
                 Speak($"Which of those items would you like to know more about?");
                 string userItemSelection = Console.ReadLine();
-
                 GiveUserItemChoice(userItemSelection, room.ItemsInsideRoom[0].Name , room.ItemsInsideRoom[0].Description);
                 GiveUserItemChoice(userItemSelection, room.ItemsInsideRoom[1].Name, room.ItemsInsideRoom[1].Description);
                 GiveUserItemChoice(userItemSelection, room.ItemsInsideRoom[2].Name, room.ItemsInsideRoom[2].Description);
@@ -66,9 +63,7 @@ namespace openHouse
                 }
             }
         }
-
         public List<string> Houses { get; set; }= new List<string>();
-
     }
 }
 

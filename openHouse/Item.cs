@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 namespace openHouse
 {
-    public class Room
+    public class Item
     {
-        public Room(string name)
+        public Item(string name)
         {
             Name = name;
         }
 
         public string Name { get; set; }
-        public List<Item> ItemsInsideRoom { get; set; } = new List<Item>();
+        public string Description { get; set; }
+
     }
 }

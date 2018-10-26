@@ -15,37 +15,37 @@ namespace openHouse
 
             Room kitchen = new Room("Kitchen");
 
-            Items sink = new Items("Kitchen Sink");
+            Item sink = new Item("Kitchen Sink");
             sink.Description = $"This {sink.Name} is a farm-style sink with industrial spray nozzel.";
             kitchen.ItemsInsideRoom.Add(sink);
-            Items stove = new Items("Kitchen Stove");
+            Item stove = new Item("Kitchen Stove");
             stove.Description = $"The {stove.Name} is a gas appliance that is fifteen years old.";
             kitchen.ItemsInsideRoom.Add(stove);
-            Items cabinets = new Items("Kitchen Cabinets");
+            Item cabinets = new Item("Kitchen Cabinets");
             cabinets.Description = $"These {cabinets.Name} are hand-made oak cabinets.";
             kitchen.ItemsInsideRoom.Add(cabinets);
 
             Room bedRoom = new Room("Bedroom");
 
-            Items floor = new Items("Wooden Floors");
+            Item floor = new Item("Wooden Floors");
             floor.Description = "These floors are original maple hardwood.";
             bedRoom.ItemsInsideRoom.Add(floor);
-            Items ceilingFan = new Items("Ceiling Fan");
+            Item ceilingFan = new Item("Ceiling Fan");
             ceilingFan.Description = "This fan has 4 blades and a beautiful light fixture";
             bedRoom.ItemsInsideRoom.Add(ceilingFan);
-            Items closet = new Items("Bedroom Closet");
+            Item closet = new Item("Bedroom Closet");
             closet.Description = "This is a walk-in closet with a shoe rack";
             bedRoom.ItemsInsideRoom.Add(closet);
 
             Room livingRoom = new Room("Living Room");
 
-            Items fireplace = new Items("Fireplace");
+            Item fireplace = new Item("Fireplace");
             fireplace.Description = "This is a real brick, wood burning fireplace";
             livingRoom.ItemsInsideRoom.Add(fireplace);
-            Items outlets = new Items("Wall Outlets");
+            Item outlets = new Item("Wall Outlets");
             outlets.Description = "There are 4 grounded electrical outlets and one cable t.v. outlet";
             livingRoom.ItemsInsideRoom.Add(outlets);
-            Items window = new Items("Window");
+            Item window = new Item("Window");
             window.Description = "The large bay window overlooks the front yard and lets in a lot of light";
             livingRoom.ItemsInsideRoom.Add(window);
             house1.Rooms.Add(bedRoom);

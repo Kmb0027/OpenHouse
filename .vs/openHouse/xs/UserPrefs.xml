@@ -3,7 +3,8 @@
     <Files>
       <File FileName="openHouse/House.cs" Line="1" Column="1" />
       <File FileName="openHouse/Room.cs" Line="1" Column="1" />
-      <File FileName="openHouse/Program.cs" Line="1" Column="1" />
+      <File FileName="openHouse/Program.cs" Line="20" Column="17" />
+      <File FileName="openHouse/Item.cs" Line="17" Column="1" />
       <File FileName="openHouse/Realtor.cs" Line="1" Column="1" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>

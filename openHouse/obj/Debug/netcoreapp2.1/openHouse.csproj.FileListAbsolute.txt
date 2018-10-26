@@ -9,14 +9,14 @@
 /Users/Olivia/Projects/openHouse/openHouse/obj/Debug/netcoreapp2.1/openHouse.AssemblyInfo.cs
 /Users/Olivia/Projects/openHouse/openHouse/obj/Debug/netcoreapp2.1/openHouse.dll
 /Users/Olivia/Projects/openHouse/openHouse/obj/Debug/netcoreapp2.1/openHouse.pdb
-C:\Users\rekre_000\source\repos\Mitchell open house\OpenHouse\openHouse\bin\Debug\netcoreapp2.1\openHouse.deps.json
-C:\Users\rekre_000\source\repos\Mitchell open house\OpenHouse\openHouse\bin\Debug\netcoreapp2.1\openHouse.runtimeconfig.json
-C:\Users\rekre_000\source\repos\Mitchell open house\OpenHouse\openHouse\bin\Debug\netcoreapp2.1\openHouse.runtimeconfig.dev.json
-C:\Users\rekre_000\source\repos\Mitchell open house\OpenHouse\openHouse\bin\Debug\netcoreapp2.1\openHouse.dll
-C:\Users\rekre_000\source\repos\Mitchell open house\OpenHouse\openHouse\bin\Debug\netcoreapp2.1\openHouse.pdb
-C:\Users\rekre_000\source\repos\Mitchell open house\OpenHouse\openHouse\obj\Debug\netcoreapp2.1\openHouse.csprojAssemblyReference.cache
-C:\Users\rekre_000\source\repos\Mitchell open house\OpenHouse\openHouse\obj\Debug\netcoreapp2.1\openHouse.csproj.CoreCompileInputs.cache
-C:\Users\rekre_000\source\repos\Mitchell open house\OpenHouse\openHouse\obj\Debug\netcoreapp2.1\openHouse.AssemblyInfoInputs.cache
-C:\Users\rekre_000\source\repos\Mitchell open house\OpenHouse\openHouse\obj\Debug\netcoreapp2.1\openHouse.AssemblyInfo.cs
-C:\Users\rekre_000\source\repos\Mitchell open house\OpenHouse\openHouse\obj\Debug\netcoreapp2.1\openHouse.dll
-C:\Users\rekre_000\source\repos\Mitchell open house\OpenHouse\openHouse\obj\Debug\netcoreapp2.1\openHouse.pdb
+C:/Users/rekre_000/source/repos/Mitchell open house/OpenHouse/openHouse/bin/Debug/netcoreapp2.1/openHouse.deps.json
+C:/Users/rekre_000/source/repos/Mitchell open house/OpenHouse/openHouse/bin/Debug/netcoreapp2.1/openHouse.runtimeconfig.json
+C:/Users/rekre_000/source/repos/Mitchell open house/OpenHouse/openHouse/bin/Debug/netcoreapp2.1/openHouse.runtimeconfig.dev.json
+C:/Users/rekre_000/source/repos/Mitchell open house/OpenHouse/openHouse/bin/Debug/netcoreapp2.1/openHouse.dll
+C:/Users/rekre_000/source/repos/Mitchell open house/OpenHouse/openHouse/bin/Debug/netcoreapp2.1/openHouse.pdb
+C:/Users/rekre_000/source/repos/Mitchell open house/OpenHouse/openHouse/obj/Debug/netcoreapp2.1/openHouse.csprojAssemblyReference.cache
+C:/Users/rekre_000/source/repos/Mitchell open house/OpenHouse/openHouse/obj/Debug/netcoreapp2.1/openHouse.csproj.CoreCompileInputs.cache
+C:/Users/rekre_000/source/repos/Mitchell open house/OpenHouse/openHouse/obj/Debug/netcoreapp2.1/openHouse.AssemblyInfoInputs.cache
+C:/Users/rekre_000/source/repos/Mitchell open house/OpenHouse/openHouse/obj/Debug/netcoreapp2.1/openHouse.AssemblyInfo.cs
+C:/Users/rekre_000/source/repos/Mitchell open house/OpenHouse/openHouse/obj/Debug/netcoreapp2.1/openHouse.dll
+C:/Users/rekre_000/source/repos/Mitchell open house/OpenHouse/openHouse/obj/Debug/netcoreapp2.1/openHouse.pdb

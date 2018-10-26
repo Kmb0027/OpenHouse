@@ -11,8 +11,13 @@ namespace openHouse
 
             Realtor realtor = new Realtor("Mitch");
             House house1 = new House("123 Main");
-
             Room kitchen = new Room("Kitchen");
+            Room bedRoom = new Room("Bedroom");
+            Room livingRoom = new Room("Living Room");
+            house1.Rooms.Add(bedRoom);
+            house1.Rooms.Add(kitchen);
+            house1.Rooms.Add(livingRoom);
+
 
             Item sink = new Item("Kitchen Sink");
             sink.Description = $"This {sink.Name} is a farm-style sink with industrial spray nozzel.";
@@ -24,7 +29,7 @@ namespace openHouse
             cabinets.Description = $"These {cabinets.Name} are hand-made oak cabinets.";
             kitchen.ItemsInsideRoom.Add(cabinets);
 
-            Room bedRoom = new Room("Bedroom");
+
 
             Item floor = new Item("Wooden Floors");
             floor.Description = "These floors are original maple hardwood.";
@@ -36,7 +41,7 @@ namespace openHouse
             closet.Description = "This is a walk-in closet with a shoe rack";
             house1.Rooms[1].ItemsInsideRoom.Add(closet);
 
-            Room livingRoom = new Room("Living Room");
+
 
             Item fireplace = new Item("Fireplace");
             fireplace.Description = "This is a real brick, wood burning fireplace";
@@ -47,9 +52,7 @@ namespace openHouse
             Item window = new Item("Window");
             window.Description = "The large bay window overlooks the front yard and lets in a lot of light";
             livingRoom.ItemsInsideRoom.Add(window);
-            house1.Rooms.Add(house1.Rooms[1]);
-            house1.Rooms.Add(kitchen);
-            house1.Rooms.Add(livingRoom);
+
 
             realtor.IntroduceHouse(house1);
             bool endDialogue = true;

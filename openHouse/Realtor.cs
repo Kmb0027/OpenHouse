@@ -28,23 +28,13 @@ namespace openHouse
             Speak($"{itemDescription}");
             return "GiveItemDescription error";
         }
-        public string GiveUserItemChoice(string userItemSelection, string itemName1, string itemDescription1, string itemName2, string itemDescription2, string itemName3, string itemDescription3)
+        public string GiveUserItemChoice(string userItemSelection, string itemName1, string itemDescription1)
         {
 
             if (userItemSelection.ToUpper() == itemName1.ToUpper())
             {
                 GiveItemDescription(itemDescription1);
-                Speak("Which item would you like to know more about?");
-            }
-            else if (userItemSelection.ToUpper() == itemName2.ToUpper())
-            {
-                GiveItemDescription(itemDescription2);
-                Speak("Which item would you like to know more about?");
-            }
-            else if (userItemSelection.ToUpper() == itemName3.ToUpper())
-            {
-                GiveItemDescription(itemDescription3);
-                Speak("Which item would you like to know more about?");
+
             }
             else if (userItemSelection == "none")
             {
@@ -54,6 +44,27 @@ namespace openHouse
 
             return "Okay we can see something else.";
 
+        }
+
+        public void LetUserSelectItems(Room room)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                Speak($"Which of those items would you like to know more about?");
+                string userItemSelection = Console.ReadLine();
+
+                GiveUserItemChoice(userItemSelection, room.ItemsInsideRoom[0].Name , room.ItemsInsideRoom[0].Description);
+                GiveUserItemChoice(userItemSelection, room.ItemsInsideRoom[1].Name, room.ItemsInsideRoom[1].Description);
+                GiveUserItemChoice(userItemSelection, room.ItemsInsideRoom[2].Name, room.ItemsInsideRoom[2].Description);
+                if (i == 4)
+                {
+                    Speak("Let's move on.");
+                }
+                else if (userItemSelection == "none")
+                {
+                    break;
+                }
+            }
         }
 
         public List<string> Houses { get; set; }= new List<string>();

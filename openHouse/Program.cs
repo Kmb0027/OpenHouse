@@ -6,7 +6,6 @@ namespace openHouse
     {
         static void Main(string[] args)
         {
-            //Set console background to desired color for font.
             Console.BackgroundColor = ConsoleColor.White;
             Console.Clear();
 
@@ -29,13 +28,13 @@ namespace openHouse
 
             Item floor = new Item("Wooden Floors");
             floor.Description = "These floors are original maple hardwood.";
-            bedRoom.ItemsInsideRoom.Add(floor);
+            house1.Rooms[1].ItemsInsideRoom.Add(floor);
             Item ceilingFan = new Item("Ceiling Fan");
             ceilingFan.Description = "This fan has 4 blades and a beautiful light fixture";
-            bedRoom.ItemsInsideRoom.Add(ceilingFan);
+            house1.Rooms[1].ItemsInsideRoom.Add(ceilingFan);
             Item closet = new Item("Bedroom Closet");
             closet.Description = "This is a walk-in closet with a shoe rack";
-            bedRoom.ItemsInsideRoom.Add(closet);
+            house1.Rooms[1].ItemsInsideRoom.Add(closet);
 
             Room livingRoom = new Room("Living Room");
 
@@ -48,94 +47,17 @@ namespace openHouse
             Item window = new Item("Window");
             window.Description = "The large bay window overlooks the front yard and lets in a lot of light";
             livingRoom.ItemsInsideRoom.Add(window);
-            house1.Rooms.Add(bedRoom);
+            house1.Rooms.Add(house1.Rooms[1]);
             house1.Rooms.Add(kitchen);
             house1.Rooms.Add(livingRoom);
 
-            realtor.Speak($"Hello! My name is {realtor.Name}");
-            realtor.Speak($"Would you like to tour the house at {house1.Address}?");
-            if (realtor.UserAnsweredYes(Console.ReadLine()))
-            {
-                realtor.Speak($"The house has a {kitchen.Name}, a {livingRoom.Name}, and a {bedRoom.Name}.");
-            }
-            else { realtor.Speak("Bye!"); Console.ReadLine(); Environment.Exit(1); }
-            //Did not exit program. Went ahead with the Open House anyway.
-
+            realtor.IntroduceHouse(house1);
             bool endDialogue = true;
             while (endDialogue == true)
             {
-                realtor.Speak($"Do you want to see the {kitchen.Name}, {livingRoom.Name} or the {bedRoom.Name}?");
-                string userRoomSelection = Console.ReadLine();
-                if (userRoomSelection.ToUpper() == kitchen.Name.ToUpper())
-                {
-                    Console.Clear();
-                    realtor.Speak($"The {kitchen.Name} has several interesting items like {sink.Name}, {stove.Name}, and {cabinets.Name}");
-
-                    for (int i = 0; i < 4; i++)
-                    {
-                        string userItemSelection = Console.ReadLine();
-
-                        realtor.GiveUserItemChoice(userItemSelection, stove.Name, stove.Description, sink.Name, sink.Description, cabinets.Name, cabinets.Description);
-                        if (i == 4)
-                        {
-                            realtor.Speak("Let's move on.");
-                        }
-                        else if (userItemSelection == "none")
-                        {
-                            break;
-                        }
-                    }
-
-                }
-                else if (userRoomSelection.ToUpper() == bedRoom.Name.ToUpper())
-                {
-                    Console.Clear();
-                    realtor.Speak($"The {bedRoom.Name} has several interesting items like {floor.Name}, {ceilingFan.Name}, and {closet.Name}");
-
-                    for (int i = 0; i < 4; i++)
-                    {
-                        string userItemSelection = Console.ReadLine();
-
-                        realtor.GiveUserItemChoice(userItemSelection, floor.Name, floor.Description, ceilingFan.Name, ceilingFan.Description, closet.Name, closet.Description);
-                        if (i == 4)
-                        {
-                            realtor.Speak("Let's move on.");
-                        }
-                        else if (userItemSelection == "none")
-                        {
-                            break;
-                        }
-                    }
-                }
-                else if (userRoomSelection.ToUpper() == livingRoom.Name.ToUpper())
-                {
-                    Console.Clear();
-                    realtor.Speak($"The {livingRoom.Name} has several interesting items like {window.Name}, {outlets.Name}, and {fireplace.Name}");
-
-                    for (int i = 0; i < 4; i++)
-                    {
-                        string userItemSelection = Console.ReadLine();
-
-                        realtor.GiveUserItemChoice(userItemSelection, window.Name, window.Description, outlets.Name, outlets.Description, fireplace.Name, fireplace.Description);
-                        if (i == 4)
-                        {
-                            realtor.Speak("Let's move on.");
-                        }
-                        else if (userItemSelection == "none")
-                        {
-                            break;
-                        }
-
-                    }
-                }
-                else
-                {
-                    endDialogue = false;
-                    realtor.Speak("Thank you for coming in today!");
-                }
+                realtor.ShowHouse(house1);
             }
-            //Allow the user to read the last line.
-            //Didn't get a chance to read the goodbye when done.
+
             Console.ReadLine();
         }
     }

@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{6733A9A5-10BE-4349-A69C-850E48D9E732}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="openHouse/Item.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="openHouse/Program.cs">
     <Files>
       <File FileName="openHouse/House.cs" Line="12" Column="66" />
-      <File FileName="openHouse/Room.cs" Line="7" Column="33" />
-      <File FileName="openHouse/Program.cs" Line="17" Column="15" />
+      <File FileName="openHouse/Room.cs" Line="8" Column="10" />
+      <File FileName="openHouse/Program.cs" Line="42" Column="20" />
       <File FileName="openHouse/Realtor.cs" Line="75" Column="29" NotebookId="1" />
-      <File FileName="openHouse/Item.cs" Line="5" Column="22" NotebookId="1" />
+      <File FileName="openHouse/Item.cs" Line="5" Column="20" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

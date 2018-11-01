@@ -33,13 +33,13 @@ namespace openHouse
 
             Item floor = new Item("Wooden Floors");
             floor.Description = "These floors are original maple hardwood.";
-            house1.Rooms[1].ItemsInsideRoom.Add(floor);
+            bedRoom.ItemsInsideRoom.Add(floor);
             Item ceilingFan = new Item("Ceiling Fan");
             ceilingFan.Description = "This fan has 4 blades and a beautiful light fixture";
-            house1.Rooms[1].ItemsInsideRoom.Add(ceilingFan);
+            bedRoom.ItemsInsideRoom.Add(ceilingFan);
             Item closet = new Item("Bedroom Closet");
             closet.Description = "This is a walk-in closet with a shoe rack";
-            house1.Rooms[1].ItemsInsideRoom.Add(closet);
+            bedRoom.ItemsInsideRoom.Add(closet);
 
 
 
